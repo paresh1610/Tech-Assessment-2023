@@ -1,4 +1,5 @@
 #!/bin/bash
+DATA_KEY=$1
 TOKEN=$(curl -X PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 21600")
-INSTANCE_ID=$(curl -H "X-aws-ec2-metadata-token: $TOKEN" -v http://169.254.169.254/latest/meta-data/instance-id)
-echo "Instance ID: $INSTANCE_ID"
+DATA=$(curl -H "X-aws-ec2-metadata-token: $TOKEN" -v http://169.254.169.254/latest/meta-data/$DATA_KEY)
+echo "$DATA_KEY: $DATA"
