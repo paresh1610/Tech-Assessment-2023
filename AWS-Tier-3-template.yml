@@ -97,7 +97,7 @@ Resources:
       SubnetId: !Ref PublicSubnet2
 
   PrivateRouteTable1:
-        Type: AWS::EC2::RouteTable
+    Type: AWS::EC2::RouteTable
     Properties:
       VpcId: !Ref VPC
 
@@ -152,7 +152,6 @@ Resources:
     Properties:
       DBSecurityGroupIngress:
         - EC2SecurityGroupName: !Ref WebServerSecurityGroup
-          EC2SecurityGroupOwnerId: !GetAtt WebServerSecurityGroup.OwnerId
       GroupDescription: Frontend Access
 
   DBInstance:
