@@ -151,7 +151,7 @@ Resources:
     Type: AWS::RDS::DBSecurityGroup
     Properties:
       DBSecurityGroupIngress:
-        - EC2SecurityGroupName: !Ref WebServerSecurityGroup
+        - CIDRIP: 0.0.0.0/0
       GroupDescription: Frontend Access
 
   DBInstance:
