@@ -172,7 +172,7 @@ Resources:
     Properties:
       InstanceType: t3.micro
       KeyName: !Ref KeyName
-      ImageId: ami-0323c3dd2da7fb37d # Amazon Linux 2 LTS AMI (HVM), SSD Volume Type (us-west-2)
+      ImageId: ami-0323c3dd2da7fb37d # Amazon Linux 2 LTS AMI (HVM)
       NetworkInterfaces:
         - AssociatePublicIpAddress: true
           DeviceIndex: '0'
